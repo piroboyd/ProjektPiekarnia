@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2Nrcd0e1lF1ZDGxIDglQIEI21mkz20aVxUYL4HqSaRoeRnGZ0oEsa+McDb0GNF0AdR6RrgRvDT4IAEKAtLrNmw==",
+  "success": true,
+  "projectFilePath": "E:\\Studia\\Programowanie Obiektowe\\PROJEKT\\ProjektPierkarnia\\ProjektPiekarnia\\ProjektPiekarnia\\ProjektPiekarnia.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Piro\\.nuget\\packages\\csvhelper\\31.0.0\\csvhelper.31.0.0.nupkg.sha512",
+    "C:\\Users\\Piro\\.nuget\\packages\\system.linq.async\\4.0.0\\system.linq.async.4.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
