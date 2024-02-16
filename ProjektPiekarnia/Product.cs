@@ -1,5 +1,5 @@
 ﻿// Klasa reprezentująca produkty
-public class Products
+public class Product
 {
     public string Nazwa { get; }
     public int Waga { get; }
@@ -16,7 +16,7 @@ public class Products
     public int SłonecznikPrażony { get; }
     public int Nadzienie { get; }
 
-    public Products(string nazwa, int waga, decimal cena, int mąkaPszenna, int mąkaŻytnia, int mleko, int woda, int drożdże, decimal jajka, int cukier, int sól, int masło, int słonecznikPrażony, int nadzienie)
+    public Product(string nazwa, int waga, decimal cena, int mąkaPszenna, int mąkaŻytnia, int mleko, int woda, int drożdże, decimal jajka, int cukier, int sól, int masło, int słonecznikPrażony, int nadzienie)
     {
         Nazwa = nazwa;
         Waga = waga;

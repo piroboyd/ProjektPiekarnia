@@ -8,18 +8,18 @@ namespace ProjektPiekarnia
 {
     public class Order
     {
-        private Dictionary<Products, int> orderItems;
+        private Dictionary<Product, int> orderItems;
 
-        public IReadOnlyDictionary<Products, int> OrderItems => orderItems;
+        public IReadOnlyDictionary<Product, int> OrderItems => orderItems;
 
         // Konstruktor
         public Order()
         {
-            orderItems = new Dictionary<Products, int>();
+            orderItems = new Dictionary<Product, int>();
         }
 
         // Metoda dodająca produkt do zamówienia
-        public void AddProduct(Products product, int quantity)
+        public void AddProduct(Product product, int quantity)
         {
             if (orderItems.ContainsKey(product))
             {
@@ -32,7 +32,7 @@ namespace ProjektPiekarnia
         }
 
         // Metoda usuwająca produkt z zamówienia
-        public void RemoveProduct(Products product)
+        public void RemoveProduct(Product product)
         {
             if (orderItems.ContainsKey(product))
             {

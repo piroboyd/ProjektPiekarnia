@@ -130,7 +130,7 @@ class Program
                                 // 2. Usuń produkt z zamówienia.
                                 Console.Write("Podaj nazwę produktu do usunięcia: ");
                                 string productNam = Console.ReadLine();
-                                Products productToRemovee = order.OrderItems.Keys.FirstOrDefault(p => p.Nazwa.Equals(productNam, StringComparison.OrdinalIgnoreCase));
+                                Product productToRemovee = order.OrderItems.Keys.FirstOrDefault(p => p.Nazwa.Equals(productNam, StringComparison.OrdinalIgnoreCase));
                                 if (productToRemovee != null)
                                 {
                                     order.RemoveProduct(productToRemovee);

@@ -5,12 +5,12 @@ using System.Linq;
 
 public class ProductsManager
 {
-    private List<Products> productsList;
+    private List<Product> productsList;
     private string filePath; // Dodajemy pole przechowujące ścieżkę do pliku.
     public ProductsManager(string filePath)
     {
         this.filePath = filePath;
-        productsList = new List<Products>();
+        productsList = new List<Product>();
     }
 
     // Metoda wczytująca produkty z pliku CSV
@@ -28,7 +28,7 @@ public class ProductsManager
             if (values.Length == 14)
             {
                 // Tworzymy obiekt klasy Products i dodajemy go do listy produktów productlist.
-                Products product = new Products(
+                Product product = new Product(
                     values[0], // Nazwa
                     int.Parse(values[1]), // Waga
                     decimal.Parse(values[2]), // Cena
@@ -59,7 +59,7 @@ public class ProductsManager
     public void RemoveProduct(string productName, FileManager fileManager, string filePath)
     {
         // Znajdź produkt o podanej nazwie.
-        Products productToRemove = productsList.FirstOrDefault(p => p.
+        Product productToRemove = productsList.FirstOrDefault(p => p.
         Nazwa.Equals(productName, StringComparison.OrdinalIgnoreCase));
 
         if (productToRemove != null)
@@ -112,7 +112,7 @@ public class ProductsManager
         int nadzienie = int.Parse(Console.ReadLine());
 
         // Tworzymy nowy obiekt produktu i dodajemy do listy
-        Products product = new Products(nazwa, waga, cena, mąkaPszenna,
+        Product product = new Product(nazwa, waga, cena, mąkaPszenna,
             mąkaŻytnia, mleko, woda, drożdże, jajka, cukier, sól, masło, słonecznikPrażony, nadzienie);
 
         productsList.Add(product);
@@ -124,7 +124,7 @@ public class ProductsManager
     }
 
     // Metoda zwracająca listę produktów
-    public List<Products> GetProducts()
+    public List<Product> GetProducts()
     {
         return productsList;
     }

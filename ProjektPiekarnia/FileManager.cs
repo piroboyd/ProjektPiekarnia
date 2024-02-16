@@ -28,7 +28,7 @@ public class FileManager
             {
                 writer.WriteLine($"{item.Key.Nazwa}: {item.Value} szt.");
 
-                foreach (var property in typeof(Products).GetProperties())
+                foreach (var property in typeof(Product).GetProperties())
                 {
                     if (property.Name != "Nazwa" && property.Name != "Waga" && property.Name != "Cena")
                     {
@@ -57,7 +57,7 @@ public class FileManager
         }
     }
 
-    public void SaveProductsToCSV(List<Products> productsList, string filePath)
+    public void SaveProductsToCSV(List<Product> productsList, string filePath)
     {
         using (StreamWriter writer = new StreamWriter(filePath))
         {
